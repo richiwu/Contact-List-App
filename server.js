@@ -5,12 +5,18 @@ var db = mongojs('contactlist', ['contactlist']);
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-var routes = require('./routes/routes');
+require('./models/testimonial');
+
+
+var routes = require('./routes/routes_mongoose');
+// var routes = require('./routes/routes');
 var configDB = require('./config/database.js');
 
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
+
+
 app.use('/', routes);
 
 

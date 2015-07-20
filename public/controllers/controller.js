@@ -2,6 +2,10 @@ var myApp = angular.module('myApp', []);
 myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
     console.log("Hello World from controller");
 
+// app.factory('postService', function($resource){
+//   return $resource('/routes/contactlist/:id');
+// });
+
 
 var refresh = function() {
   $http.get('/contactlist').success(function(response) {
