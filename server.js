@@ -8,8 +8,8 @@ var mongoose = require('mongoose');
 require('./models/testimonial');
 
 
-var routes = require('./routes/routes_mongoose');
-// var routes = require('./routes/routes');
+// var routes = require('./routes/routes_mongoose');
+var routes = require('./routes/routes');
 var configDB = require('./config/database.js');
 
 
